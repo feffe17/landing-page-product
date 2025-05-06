@@ -10,6 +10,9 @@
     padding: 0;
     box-sizing: border-box;
     color: var(--text-color);
+    font-family: "montserrat", sans-serif;
+    line-height: 1.24;
+    font-weight: 400;
 }
 
 body {
@@ -48,4 +51,32 @@ header {
     .sidebar.open {
         right: 0;
     }
+}
+
+jumbotron {
+
+    .banner-img {
+        background-image: url("./imgs/banner-image.png");
+        background-size: cover;
+        background-position: center;
+        aspect-ratio: 1 / 1;
+    }
+
+    .banner-bg {
+        background-image: url("./imgs/banner-bg.png");
+        background-size: cover;
+        background-position: center;
+        aspect-ratio: 1 / 1;
+
+        button {
+            background-color: transparent;
+            border: 1px solid var(--text-color);
+        }
+
+        button:hover {
+            background-color: var(--text-color);
+            color: white;
+        }
+    }
+
 }
