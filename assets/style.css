@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--text-color);
 }
 
 body {
@@ -29,11 +30,19 @@ header {
         right: -250px;
         width: 250px;
         height: 100%;
-        background-color: #fff;
+        background-color: white;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
         padding: 1rem;
         transition: right 0.3s ease;
         z-index: 999;
+
+        a {
+            color: var(--text-color);
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
     }
 
     .sidebar.open {
