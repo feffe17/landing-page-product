@@ -7,6 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 
@@ -14,17 +20,14 @@
     <header>
 
 
-
-        <!-- menu a tendina a dx -->
-
-        <div class="d-flex justify-content-between align-items-center mx-4">
+        <div class="d-flex justify-content-between align-items-center mx-4 h-100 mt-2">
             <!-- logo a sx-->
             <div class="logo">
                 <img src="./assets/imgs/logo.png" alt="Logo">
             </div>
 
             <!-- navbar a dx -->
-            <ul class="d-flex list-unstyled gap-4">
+            <ul class="d-lg-flex d-none list-unstyled gap-4">
                 <li>Home</li>
                 <li>I punti di forza</li>
                 <li>Recensioni</li>
@@ -32,6 +35,27 @@
                 <li>FAQs</li>
                 <li>Newsletter</li>
             </ul>
+
+            <!-- menu a tendina a dx -->
+            <img src="./assets/icons/navbar-icon.svg" id="sidebar-toggle" class="d-lg-none h-100">
+            <div class="sidebar">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <img src="./assets/imgs/logo.png" alt="Logo">
+                    </div>
+                    <div>
+                        <i id="sidebar-close" class="bi bi-x-lg"></i>
+                    </div>
+                </div>
+                <ul class="d-flex flex-column list-unstyled gap-4 mt-4">
+                    <li><a class="text-decoration-none" href="#home">Home</a></li>
+                    <li>I punti di forza</li>
+                    <li>Recensioni</li>
+                    <li>Paperelle</li>
+                    <li>FAQs</li>
+                    <li>Newsletter</li>
+                </ul>
+            </div>
 
         </div>
     </header>
@@ -70,6 +94,8 @@
 
     </footer>
 
+
+    <script src="./assets/app.js"></script>
 </body>
 
 </html>
