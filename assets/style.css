@@ -80,3 +80,54 @@ jumbotron {
     }
 
 }
+
+.rating {
+    height: 10px;
+}
+
+.review-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.review-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.review-card {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.rating img {
+    height: 20px;
+    margin: 0 2px;
+}
+
+@media (min-width: 992px) {
+    .review-card {
+        flex: 0 0 33.3333%;
+    }
+}
+
+.slider-indicators input[type="radio"] {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-indicators input[type="radio"]:checked {
+    background-color: #333;
+}

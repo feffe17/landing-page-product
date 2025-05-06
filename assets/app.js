@@ -21,3 +21,49 @@ document.addEventListener('click', (e) => {
         sidebar.classList.remove('open');
     }
 });
+
+
+
+// SLIDER
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const reviewContainer = document.querySelector('.review-slider');
+    const indicatorsContainer = document.querySelector('.slider-indicators');
+    const reviews = document.querySelectorAll('.review-card');
+
+    function setupIndicators() {
+        indicatorsContainer.innerHTML = '';
+        const isLargeScreen = window.innerWidth >= 992;
+        const itemsPerPage = isLargeScreen ? 3 : 1;
+        const totalPages = Math.ceil(reviews.length / itemsPerPage);
+
+        for (let i = 0; i < totalPages; i++) {
+            const radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.name = 'review-slider';
+            radio.classList.add('mx-1');
+            radio.addEventListener('click', () => {
+                const scrollAmount = reviewContainer.offsetWidth * i;
+                reviewContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+            });
+            indicatorsContainer.appendChild(radio);
+        }
+        indicatorsContainer.children[0]?.click();
+    }
+
+    function updateIndicatorOnScroll() {
+        const scrollLeft = reviewContainer.scrollLeft;
+        const width = reviewContainer.offsetWidth;
+        const isLargeScreen = window.innerWidth >= 992;
+        const itemsPerPage = isLargeScreen ? 3 : 1;
+        const currentIndex = Math.round(scrollLeft / width);
+
+        const radios = indicatorsContainer.querySelectorAll('input');
+        radios.forEach((r, i) => r.checked = i === currentIndex);
+    }
+
+    reviewContainer.addEventListener('scroll', updateIndicatorOnScroll);
+    window.addEventListener('resize', setupIndicators);
+    setupIndicators();
+});
