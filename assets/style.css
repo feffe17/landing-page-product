@@ -141,11 +141,24 @@ jumbotron {
     font-weight: 500;
 }
 
-h1 {
+h1,
+h3 {
     font-weight: 600 !important;
 }
 
 .bi-plus-lg,
 .bi-dash-lg {
     cursor: pointer;
+}
+
+.blue-icons {
+    height: 30px;
+}
+
+@media (min-width: 992px) {
+    .d-border {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+
+    }
 }
