@@ -3,6 +3,7 @@
     --secondary-color: #04DF6C;
     --text-color: #3D3A38;
     --background-color: #f4f4f4;
+    --background-color-darker: #f8f8f8
 }
 
 * {
@@ -81,10 +82,7 @@ jumbotron {
 
 }
 
-.rating {
-    height: 10px;
-}
-
+/* #region slider */
 .review-slider {
     display: flex;
     overflow-x: auto;
@@ -130,4 +128,19 @@ jumbotron {
 
 .slider-indicators input[type="radio"]:checked {
     background-color: #333;
+}
+
+/* #endregion slider */
+
+.darker {
+    background-color: var(--background-color-darker);
+}
+
+.c-prize {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+h1 {
+    font-weight: 600 !important;
 }
