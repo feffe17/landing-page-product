@@ -144,3 +144,8 @@ jumbotron {
 h1 {
     font-weight: 600 !important;
 }
+
+.bi-plus-lg,
+.bi-dash-lg {
+    cursor: pointer;
+}

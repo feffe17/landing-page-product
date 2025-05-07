@@ -67,3 +67,25 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', setupIndicators);
     setupIndicators();
 });
+
+
+// FAQ
+const openBtns = document.querySelectorAll('.bi-plus-lg');
+const closeBtns = document.querySelectorAll('.bi-dash-lg');
+const faqItems = document.querySelectorAll('.faq-desc');
+
+openBtns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        faqItems[index].classList.remove('d-none');
+        openBtns[index].classList.add('d-none');
+        closeBtns[index].classList.remove('d-none');
+    });
+})
+
+closeBtns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        faqItems[index].classList.add('d-none');
+        openBtns[index].classList.remove('d-none');
+        closeBtns[index].classList.add('d-none');
+    });
+})
