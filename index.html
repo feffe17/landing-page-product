@@ -17,7 +17,7 @@
 
 
 <body>
-    <header class="mb-3">
+    <header class="">
 
         <div class="d-flex justify-content-between align-items-center px-4 h-100 mt-2">
             <!-- logo a sx-->
@@ -27,16 +27,16 @@
 
             <!-- navbar a dx -->
             <ul class="d-lg-flex d-none list-unstyled gap-4 align-items-center">
-                <li>Home</li>
-                <li>I punti di forza</li>
-                <li>Recensioni</li>
-                <li>Paperelle</li>
-                <li>FAQs</li>
-                <li>Newsletter</li>
+                <li><a class="text-decoration-none" href="#home">Home</a></li>
+                <li><a class="text-decoration-none" href="#strenght">I punti di forza</a></li>
+                <li><a class="text-decoration-none" href="#reviews">Recensioni</a></li>
+                <li><a class="text-decoration-none" href="#collection">Paperelle</a></li>
+                <li><a class="text-decoration-none" href="#faqs">FAQs</a></li>
+                <li><a class="text-decoration-none" href="#newsletter">Newsletter</a></li>
             </ul>
 
             <!-- menu a tendina a dx -->
-            <img src=" ./assets/icons/navbar-icon.svg" id="sidebar-toggle" class="d-lg-none h-100">
+            <img src=" ./assets/icons/navbar-icon.svg" id="sidebar-toggle" class="d-lg-none w-30">
             <div class="sidebar">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="logo">
@@ -48,11 +48,11 @@
                 </div>
                 <ul class="d-flex flex-column list-unstyled gap-4 mt-4">
                     <li><a class="text-decoration-none" href="#home">Home</a></li>
-                    <li>I punti di forza</li>
-                    <li>Recensioni</li>
-                    <li>Paperelle</li>
-                    <li>FAQs</li>
-                    <li>Newsletter</li>
+                    <li><a class="text-decoration-none" href="#strenght">I punti di forza</a></li>
+                    <li><a class="text-decoration-none" href="#reviews">Recensioni</a></li>
+                    <li><a class="text-decoration-none" href="#collection">Paperelle</a></li>
+                    <li><a class="text-decoration-none" href="#faqs">FAQs</a></li>
+                    <li><a class="text-decoration-none" href="#newsletter">Newsletter</a></li>
                 </ul>
             </div>
 
@@ -60,7 +60,7 @@
 
     </header>
 
-    <jumbotron>
+    <jumbotron id="home">
 
         <div class="row w-100 m-0">
             <!-- immagine paperella -->
@@ -80,7 +80,7 @@
     </jumbotron>
 
     <main>
-        <section class="mt-5">
+        <section id="strenght" class="mb-5">
             <!-- 3 colonne per descrivere il prodotto (quella centrale con immagine) -->
             <div class="container">
                 <div class="row">
@@ -136,7 +136,7 @@
             </div>
         </section>
 
-        <section class="mt-5">
+        <section id="reviews" class="mb-5">
             <div class="container">
                 <h1 class="text-center">Cosa ne pensano i nostri sviluppatori</h1>
 
@@ -234,7 +234,7 @@
             </div>
         </section>
 
-        <section class="mt-2 py-5 darker">
+        <section id="collection" class="mb-2 py-5 darker">
             <!-- collezione / market -->
             <div class="container">
                 <h1 class="text-center">La collezione di paperelle</h1>
@@ -284,7 +284,7 @@
             </div>
         </section>
 
-        <section class="mt-5 ">
+        <section id="faqs" class="mb-5 ">
             <!-- FAQS + qualità prodotto -->
             <div class="container">
                 <h1 class="text-center mb-4">FAQs</h1>
@@ -387,7 +387,7 @@
 
         </section>
 
-        <section class="mt-5 py-5 darker">
+        <section id="newsletter" class="mb-5 py-5 darker">
             <!-- area social -->
             <div class="container">
                 <h1 class="text-center">Iscriviti per rimanere aggiornato</h1>
@@ -420,7 +420,9 @@
     </main>
 
     <footer>
-
+        <div class="container">
+            <p class="text-center m-0 p-2">© 2025 "Your agency". Tutti i diritti riservati.</p>
+        </div>
     </footer>
 
 
