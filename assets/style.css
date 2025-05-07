@@ -162,3 +162,28 @@ h3 {
 
     }
 }
+
+.input-email {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent;
+    padding: 2rem 0.5rem;
+    font-weight: 500;
+}
+
+.sub-btn {
+    background-color: transparent;
+    border: 0;
+}
+
+.social-icons {
+    border: 1px solid black;
+}
+
+.w-30 {
+    width: 30px;
+}
+
+.content-box {
+    box-sizing: content-box !important;
+}
